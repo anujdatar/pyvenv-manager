@@ -44,8 +44,7 @@ activate() {
 
 manager() {
   case $1 in
-    "--version" || "-v" )
+    "--version" | "-v" )
       echo $PYVENV_MGR_VERSION;;
   esac
-
 }
