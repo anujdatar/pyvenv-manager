@@ -48,3 +48,5 @@ manager() {
       echo $PYVENV_MGR_VERSION;;
   esac
 }
+
+manager $@
