@@ -179,7 +179,7 @@
   esac
 
   # make sure anm.sh is executable
-  is_sudo chmod +x ${install_path}/pyvenv-manager.sh
+  chmod +x ${install_path}/pyvenv-manager.sh
 
   echo "Adding ANM executable symlink to bin"; echo
   mkdir -p ${install_path}/bin
