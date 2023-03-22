@@ -1,5 +1,7 @@
 #! /bin/bash
 
+PYVENV_MGR_VERSION="0.0.1"
+
 windows() { [ -n "$WINDIR" ]; }
 
 create() {
@@ -42,6 +44,8 @@ activate() {
 
 manager() {
   case $1 in
-    "activate")
+    "--version" || "-v" )
+      echo $PYVENV_MGR_VERSION;;
+  esac
 
 }
