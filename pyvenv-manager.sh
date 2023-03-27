@@ -6,8 +6,8 @@ windows() { [ -n "$WINDIR" ]; }
 
 create() {
   if [ -z "$1" ]; then
-    target_dir="$HOME/.pyvenvs/venvs/$(basename pwd)"
-  elif [ "$1" == "--local" ]
+    target_dir="$HOME/.pyvenvs/venvs/$(basename $(pwd))"
+  elif [ "$1" == "--local" ]; then
     target_dir="venv"
   else
     target_dir="$HOME/.pyvenvs/venvs/$1"
@@ -36,7 +36,7 @@ activate() {
   if [ -d "$(pwd)/venv" ]; then
     env_dir="$(pwd)/venv"
   elif [ -z "$1" ]; then
-    env_dir="$HOME/.pyvenvs/venvs/$(basename pwd)"
+    env_dir="$HOME/.pyvenvs/venvs/$(basename $(pwd))"
   else
     env_dir="$HOME/.pyvenvs/venvs/$1"
   fi
